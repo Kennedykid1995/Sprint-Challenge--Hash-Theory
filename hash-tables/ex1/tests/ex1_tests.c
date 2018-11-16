@@ -4,6 +4,7 @@
 
 char *test_ex1()
 {
+  printf("working at the top");
   int weights_1 = {9};
   Answer *answer_1 = get_indices_of_item_weights(&weights_1, 1, 9);
   mu_assert(answer_1 == NULL, "Your function did not return the expected answer for input {9}");
@@ -28,6 +29,8 @@ char *test_ex1()
 
 char *all_tests()
 {
+  printf("working at the top");
+
   mu_suite_start();
 
   mu_run_test(test_ex1);
