@@ -12,7 +12,7 @@ Answer *get_indices_of_item_weights(int *weights, int length, int limit)
   //length is the amount of items needed to create the limit sum.
   //loop through twice to find the indices of the items 
   //a set of if statements the determine if the weights add up to the limit.
-  //return two indices
+  //return the amount of indices needed to create limit.
   LinkedPair *index_1;
   LinkedPair *index_2;
   for(int i = 0; i < ht->storage; i++){
