@@ -28,18 +28,14 @@ Answer *get_indices_of_item_weights(int *weights, int length, int limit)
   //loop through to find the indices of the items 
   //a  if statement that determines if the weights add up to the limit.
   //return the amount of indices needed to create limit.
-  
-  for(int i = 0; i < length; i++){
-    hash_table_insert(ht, weights[i], i);
-  }
   for(int i = 0; i < length; i ++){
-    int retrieve = hash_table_retrieve(ht, (limit - weights[i]));
+    int retrieve = hash_table_retrieve(ht,weights[i]);
     if (retrieve != -1){
-      if(i > retrieve){
         answer->index_1=i;
         answer->index_2=retrieve;
         return answer;
-      } 
+    }else{
+        hash_table_insert(ht,limit - weights[i], i);
     }
   }
   return NULL;
