@@ -10,7 +10,9 @@ char **reconstruct_trip(Ticket **tickets, int length)
   char **route = malloc(length * sizeof(char *));
 
   // YOUR CODE HERE
-
+  //find the starting location and the end location.
+  //return both start and destination but also the stops along the way.
+  
   return route;
 }
 

@@ -38,9 +38,9 @@ Answer *get_indices_of_item_weights(int *weights, int length, int limit)
       if(i > retrieve){
         answer->index_1=i;
         answer->index_2=retrieve;
+        return answer;
       } 
     }
-    return answer;
   }
   return NULL;
 }
